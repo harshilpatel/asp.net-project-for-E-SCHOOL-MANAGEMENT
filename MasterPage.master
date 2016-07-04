@@ -1,0 +1,198 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Emart</title>
+</head>
+<body bgcolor="aqua" style="background-color: #cf87ff">
+    <form id="form1" runat="server">
+    <div>
+        &nbsp;
+        <table border="0" cellpadding="0" cellspacing="0" style="z-index: 103; left: 1px;
+            width: 130%; position: absolute; top: 4px; height: 219%">
+            <tr>
+                <td colspan="2" style="height: 64px; background-color:#cf87ff; color: black; text-decoration: none;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Image ID="Image3" runat="server" Height="104px" Style="z-index: 100; left: -2px;
+                        position: absolute; top: -2px" Width="1232px" ImageUrl="~/images/ERP.bmp" />
+                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 32px; height: 517px; background-color:#cf87ff;">
+                    &nbsp;&nbsp;
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        &nbsp;
+                        <asp:Menu ID="Menu1" runat="server" BackColor="Transparent" DynamicHorizontalOffset="2"
+                            Font-Names="Franklin Gothic Book" Font-Size="Medium" ForeColor="Maroon" Height="1px" Orientation="Horizontal"
+                            StaticSubMenuIndent="10px" Style="z-index: 100; left: 246px; position: absolute;
+                            top: 104px" Width="476px" Font-Bold="True" Font-Underline="True" OnMenuItemClick="Menu1_MenuItemClick">
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                            <DynamicMenuStyle BackColor="#F7F6F3" />
+                            <DynamicItemTemplate>
+                                <%# Eval("Text") %>
+                            </DynamicItemTemplate>
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <Items>
+                                <asp:MenuItem Text="Home" Value="Home" ImageUrl="~/cisco imaged/but1_up.gif" 
+                                    NavigateUrl="Default.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Jewellery" Value="Jewellery">
+                                    <asp:MenuItem NavigateUrl="default.aspx?item=pring" Text="Platinum" 
+                                        Value="Platinum"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="default.aspx?item=dring" Text="Daimond" 
+                                        Value="Daimond"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="default.aspx?item=gear" Text="Gold" Value="Gold"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selected="True" Text="Garments" Value="Garments">
+                                    <asp:MenuItem NavigateUrl="default.aspx?item=lwest" Text="Ladies Wear" 
+                                        Value="Ladies Wear">
+                                    </asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="default.aspx?item=mkurta" Text="Mens Wear" 
+                                        Value="Mens Wear"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="default.aspx?item=kjeans" Text="Kids Wear" 
+                                        Value="Kids Wear"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="About Us" Value="About Us" NavigateUrl="Aboutus.aspx"></asp:MenuItem>
+                            </Items>
+                            <StaticItemTemplate>
+                                <%# Eval("Text") %>
+                            </StaticItemTemplate>
+                            <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                        </asp:Menu>
+                        <asp:Image ID="Image1" runat="server" BorderStyle="Dashed" Height="32px" ImageUrl="~/cisco imaged/but1_up.gif"
+                            Style="z-index: 102; left: 200px; position: absolute; top: 100px" Width="48px" />
+                    </asp:ContentPlaceHolder>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:TreeView ID="TreeView2" runat="server" BackColor="#FF8000" ForeColor="Maroon"
+                            ImageSet="BulletedList3" OnSelectedNodeChanged="TreeView2_SelectedNodeChanged" meta:resourcekey="TreeView2Resource1" BorderColor="BlueViolet" Font-Bold="False" Font-Underline="True" Height="340px" Width="138px">
+                            <ParentNodeStyle Font-Bold="True" Font-Italic="True" />
+                            <HoverNodeStyle Font-Underline="True" ForeColor="Maroon" />
+                            <SelectedNodeStyle Font-Underline="True" ForeColor="Maroon" HorizontalPadding="0px"
+                                VerticalPadding="0px" BackColor="White" BorderColor="Transparent" BorderStyle="Solid" Font-Bold="True" Font-Italic="True" />
+                            <Nodes>
+                                <asp:TreeNode Expanded="True" Text="Garments" ToolTip="Cloths and Cloths YOU want...."
+                                    Value="Garments" meta:resourcekey="TreeNodeResource1">
+                                    <asp:TreeNode Text="Ladies Wear" Value="Ladies Wear" meta:resourcekey="TreeNodeResource2">
+                                        <asp:TreeNode Text="Saree" Value="Saree" meta:resourcekey="TreeNodeResource3" 
+                                            NavigateUrl="Default.aspx?item=lsaree"  ></asp:TreeNode>
+                                        <asp:TreeNode Text="Miniskirt" Value="Marriage Wear" 
+                                            NavigateUrl="Default.aspx?item=lskirt"></asp:TreeNode>
+                                        <asp:TreeNode Text="NightWear" Value="Ladies NightWear" 
+                                            NavigateUrl="Default.aspx?item=lnight"></asp:TreeNode>
+                                        <asp:TreeNode Text="Ladies Suit" Value="Suit" 
+                                            meta:resourcekey="TreeNodeResource4" NavigateUrl="Default.aspx?item=lsuit" ></asp:TreeNode>
+                                        <asp:TreeNode Text="Ladies Skirt" Value="Skirt" 
+                                            meta:resourcekey="TreeNodeResource8" NavigateUrl="default.aspx?item=lskirt"></asp:TreeNode>
+                                        <asp:TreeNode Text="Ladies Tops" Value="Tops" 
+                                            meta:resourcekey="TreeNodeResource7" NavigateUrl="default.aspx?item=ltops"></asp:TreeNode>
+                                        <asp:TreeNode Text="Ladies Kurta" Value="Ladies Kurta" 
+                                            NavigateUrl="default.aspx?item=lkurta"></asp:TreeNode>
+                                        <asp:TreeNode Text=" Ladies Shirts" Value="Shirts" 
+                                            meta:resourcekey="TreeNodeResource6" NavigateUrl="default.aspx?item=lshirt"></asp:TreeNode>
+                                        <asp:TreeNode Text="Ladies Jeans" Value="Jeans" 
+                                            meta:resourcekey="TreeNodeResource5" NavigateUrl="default.aspx?item=ljeans"></asp:TreeNode>
+                                        <asp:TreeNode Text="Indo-Western" Value="New Node" 
+                                            NavigateUrl="default.aspx?item=lindo"></asp:TreeNode>
+                                        <asp:TreeNode Text="Sleveless Shirt" Value="Ladies Sleveless Shirt" 
+                                            NavigateUrl="default.aspx?item=lslvshirt"></asp:TreeNode>
+                                        <asp:TreeNode Text=" Western Wear" Value="ladies Western Wear" 
+                                            NavigateUrl="default.aspx?item=lwest"></asp:TreeNode>
+                                        <asp:TreeNode Text=" Marrige Gaoun" Value="New Node" 
+                                            NavigateUrl="default.aspx?item=lgaoun"></asp:TreeNode>
+                                        <asp:TreeNode Text="Designer Dress" Value="Designer Dresses" 
+                                            NavigateUrl="default.aspx?item=ldesin"></asp:TreeNode>
+                                        <asp:TreeNode Text=" Sleveless Tops" Value="Party-Wear" 
+                                            NavigateUrl="default.aspx?item=lslvles"></asp:TreeNode>
+                                        <asp:TreeNode Text=" Full Sleves Top" Value="ladies Full Sleves Top" 
+                                            NavigateUrl="default.aspx?item=lfultop"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode Text="Mens Wear" Value="Mens Wear" meta:resourcekey="TreeNodeResource9">
+                                        <asp:TreeNode Text="Tie" Value="Tie" NavigateUrl="default.aspx?item=mtie"></asp:TreeNode>
+                                        <asp:TreeNode Text="Kurta" Value="Kurta" NavigateUrl="default.aspx?item=mkurta"></asp:TreeNode>
+                                        <asp:TreeNode Text="Shirts" Value="Shirts" 
+                                            NavigateUrl="default.aspx?item=mshirt"></asp:TreeNode>
+                                        <asp:TreeNode Text="Socks" Value="Socks" NavigateUrl="default.aspx?item=msock"></asp:TreeNode>
+                                        <asp:TreeNode Text="Jeans" Value="Jeans" NavigateUrl="default.aspx?item=mjean">
+                                        </asp:TreeNode>
+                                        <asp:TreeNode Text="Hanki" Value="Hanki" NavigateUrl="default.aspx?item=mhanki"></asp:TreeNode>
+                                        <asp:TreeNode Text="T-Shirts" Value="T-Shirts" 
+                                            NavigateUrl="default.aspx?item=mtshirt"></asp:TreeNode>
+                                        <asp:TreeNode Text="Trousers" Value="Trousers" 
+                                            NavigateUrl="default.aspx?item=mtrou"></asp:TreeNode>
+                                        <asp:TreeNode Text="Marrige-Wear" Value="Marrige Wear" 
+                                            NavigateUrl="default.aspx?item="></asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode Text="Kids Wear" Value="Kids Wear" meta:resourcekey="TreeNodeResource10">
+                                        <asp:TreeNode Text="Nikar" Value="Nikar"></asp:TreeNode>
+                                        <asp:TreeNode Text="Froks" Value="Froks"></asp:TreeNode>
+                                        <asp:TreeNode Text="Kids Shirts" Value="Tops"></asp:TreeNode>
+                                        <asp:TreeNode Text="Kids Jeans" Value="Jeans"></asp:TreeNode>
+                                        <asp:TreeNode Text="Kids T-Shirts" Value="T-Shirts"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="Jewellery" Value="Jewellery" meta:resourcekey="TreeNodeResource11">
+                                    <asp:TreeNode Text="Platinum" Value="Platinum" meta:resourcekey="TreeNodeResource12">
+                                        <asp:TreeNode Text="Platinum Rings" Value="Rings" 
+                                            NavigateUrl="default.aspx?item=pring"></asp:TreeNode>
+                                        <asp:TreeNode Text="Platinum Earings" Value="Earings" 
+                                            NavigateUrl="default.aspx?item=pear"></asp:TreeNode>
+                                        <asp:TreeNode Text="Platinum Necklace" Value="Necklaces" 
+                                            NavigateUrl="default.aspx?item=neck"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode Text="Diamond" Value="Diamond" meta:resourcekey="TreeNodeResource13">
+                                        <asp:TreeNode Text="Diamond Rings" Value="Rings" 
+                                            NavigateUrl="default.aspx?item=dring"></asp:TreeNode>
+                                        <asp:TreeNode Text="Diamond Earings" Value="Earings" 
+                                            NavigateUrl="default.aspx?item=dear"></asp:TreeNode>
+                                        <asp:TreeNode Text="Diamond Pendents" Value="Pendents" 
+                                            NavigateUrl="default.aspx?item=dpen"></asp:TreeNode>
+                                        <asp:TreeNode Text="Diamond Necklace" Value="Necklaces" 
+                                            NavigateUrl="default.aspx?item=dneck"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode Text="Gold" Value="Gold" meta:resourcekey="TreeNodeResource14">
+                                        <asp:TreeNode Text="Gold Rings" Value="Rings" 
+                                            NavigateUrl="default.aspx?item=gring"></asp:TreeNode>
+                                        <asp:TreeNode Text="Gold Earings" Value="Earings" 
+                                            NavigateUrl="default.aspx?item=ear"></asp:TreeNode>
+                                        <asp:TreeNode Text="Gold Pendents" Value="Pendents" 
+                                            NavigateUrl="default.aspx?item=gpend"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                </asp:TreeNode>
+                            </Nodes>
+                            <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Maroon" HorizontalPadding="5px"
+                                NodeSpacing="0px" VerticalPadding="0px" BackColor="Transparent" BorderColor="Transparent" BorderStyle="None" Font-Bold="True" Font-Italic="True" />
+                            <LeafNodeStyle Font-Underline="True" ForeColor="Maroon" Font-Bold="False" Font-Italic="False" />
+                            <RootNodeStyle Font-Bold="True" Font-Italic="True" />
+                        </asp:TreeView>
+                </td>
+                <td style="width: 531px; height: 517px; background-color: #cf87ff; color: #015800;">
+                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        &nbsp;&nbsp;</asp:ContentPlaceHolder>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp;
+                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                        &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp;
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut"
+                        Style="z-index: 103; left: 732px; position: absolute; top: 104px" Width="76px" Font-Bold="True" ForeColor="Maroon" Height="24px" LogoutAction="RedirectToLoginPage" />
+                </td>
+            </tr>
+        </table>
+    </div>
+     
+        <asp:Label ID="Label1" runat="server" Style="z-index: 100; left: 144px; position: absolute;
+            top: 0px" Text="<marquee>Welcome To World Of Shopping  METRO MALL </marquee>" Width="498px" BackColor="DarkViolet" Font-Bold="True" Font-Italic="True" Font-Names="Castellar" Font-Size="Large" Font-Underline="True" ForeColor="#FF8000" Height="29px"></asp:Label>
+        <asp:Label ID="Label2" runat="server" BackColor="Transparent" Font-Underline="True"
+            ForeColor="#FF8000" Style="z-index: 101; left: 5px; position: absolute; top: 565px"
+            Text="<MARQUEE>Garments</marquee>" Width="149px"></asp:Label>
+        &nbsp;
+    </form>
+</body>
+</html>
